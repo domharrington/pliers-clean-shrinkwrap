@@ -2,7 +2,7 @@
   "author": "Paul Serby <paul@serby.net>",
   "name": "pliers-clean-shrinkwrap",
   "description": "Cleans shrinkwrap of repository URL",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "tags": [
     "pliers",
     "qa"
@@ -21,8 +21,6 @@
   "engines": {
     "node": ">=0.10"
   },
-  "dependencies": {
-  },
-  "devDependencies": {
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }
