@@ -1,0 +1,28 @@
+{
+  "author": "Paul Serby <paul@serby.net>",
+  "name": "pliers-clean-shrinkwrap",
+  "description": "Cleans shrinkwrap of repository URL",
+  "version": "0.0.1",
+  "tags": [
+    "pliers",
+    "qa"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:serby/pliers-clean-shrinkwrap"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npmjs.org"
+  },
+  "main": "./pliers-clean-shrinkwrap",
+  "scripts": {
+    "lint": "./node_modules/.bin/jshint . --reporter=./node_modules/jshint-full-path/index.js"
+  },
+  "engines": {
+    "node": ">=0.10"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+  }
+}
