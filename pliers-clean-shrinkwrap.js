@@ -7,7 +7,7 @@ module.exports = function (pliers) {
 
     if (!pliers.version) {
       pliers.logger.error('You need pliers >=0.3.4 to use this plugin')
-      process.exit(1)
+      done(1)
     }
 
     var shrinkwrapPath = join(pliers.cwd , '/npm-shrinkwrap.json')
