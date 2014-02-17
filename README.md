@@ -1,5 +1,7 @@
 # pliers-clean-shrinkwrap
 
+[![build status](https://secure.travis-ci.org/serby/pliers-clean-shrinkwrap.png)](http://travis-ci.org/serby/pliers-clean-shrinkwrap)
+
 Strips out 'resolved' from npmshrinkwraps
 
 ## Installation
@@ -27,6 +29,18 @@ pliers cleanShrinkwrap
 
 Will clean the npmshrinkwrap.json in the current directory.
 
+### Custom Taskname
+
+If you need a custom taskname add as second argument.
+
+```js
+
+module.exports = function (pliers) {
+
+  require('pliers-clean-shrinkwrap')(pliers, 'myTaskName')
+
+}
+```
 
 ## Credits
 [Paul Serby](https://github.com/serby/) follow me on twitter [@serby](http://twitter.com/serby)
