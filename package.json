@@ -22,5 +22,7 @@
     "node": ">=0.10"
   },
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "pliers": "~0.3.2"
+  }
 }

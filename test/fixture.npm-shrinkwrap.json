@@ -1,0 +1,97 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "dependencies": {
+    "lodash": {
+      "version": "1.3.1",
+      "from": "lodash@~1",
+      "resolved": "http://npm.clockte.ch/lodash/-/lodash-1.3.1.tgz"
+    },
+    "async": {
+      "version": "0.2.9",
+      "from": "async@~0.2",
+      "resolved": "http://npm.clockte.ch/async/-/async-0.2.9.tgz"
+    },
+    "git-package": {
+      "version": "1",
+      "from": "git-package@git+ssh://git@github.com:githubuser/mypackage.git#v1",
+      "resolved": "git+ssh://git@github.com:githubuser/mypackage.git#sha1hash",
+      "dependencies": {}
+    },
+    "glob": {
+      "version": "3.1.21",
+      "from": "glob@~3.1",
+      "resolved": "http://npm.clockte.ch/glob/-/glob-3.1.21.tgz",
+      "dependencies": {
+        "minimatch": {
+          "version": "0.2.12",
+          "from": "minimatch@~0.2.11",
+          "resolved": "http://npm.clockte.ch/minimatch/-/minimatch-0.2.12.tgz",
+          "dependencies": {
+            "lru-cache": {
+              "version": "2.3.1",
+              "from": "lru-cache@2",
+              "resolved": "http://npm.clockte.ch/lru-cache/-/lru-cache-2.3.1.tgz"
+            },
+            "sigmund": {
+              "version": "1.0.0",
+              "from": "sigmund@~1.0.0",
+              "resolved": "http://npm.clockte.ch/sigmund/-/sigmund-1.0.0.tgz"
+            }
+          }
+        },
+        "graceful-fs": {
+          "version": "1.2.3",
+          "from": "graceful-fs@~1.2.0",
+          "resolved": "http://npm.clockte.ch/graceful-fs/-/graceful-fs-1.2.3.tgz"
+        },
+        "inherits": {
+          "version": "1.0.0",
+          "from": "inherits@1",
+          "resolved": "http://npm.clockte.ch/inherits/-/inherits-1.0.0.tgz"
+        }
+      }
+    },
+    "commander": {
+      "version": "1.1.1",
+      "from": "commander@~1.1",
+      "resolved": "http://npm.clockte.ch/commander/-/commander-1.1.1.tgz",
+      "dependencies": {
+        "keypress": {
+          "version": "0.1.0",
+          "from": "keypress@0.1.x",
+          "resolved": "http://npm.clockte.ch/keypress/-/keypress-0.1.0.tgz"
+        }
+      }
+    },
+    "rimraf": {
+      "version": "2.1.4",
+      "from": "rimraf@2.1",
+      "resolved": "http://npm.clockte.ch/rimraf/-/rimraf-2.1.4.tgz",
+      "dependencies": {
+        "graceful-fs": {
+          "version": "1.2.3",
+          "from": "graceful-fs@~1.2.0",
+          "resolved": "http://npm.clockte.ch/graceful-fs/-/graceful-fs-1.2.3.tgz"
+        }
+      }
+    },
+    "mkdirp": {
+      "version": "0.3.5",
+      "from": "mkdirp@0.3",
+      "resolved": "http://npm.clockte.ch/mkdirp/-/mkdirp-0.3.5.tgz"
+    },
+    "logga": {
+      "version": "1.0.0",
+      "from": "logga@>=0.0.2",
+      "resolved": "http://npm.clockte.ch/logga/-/logga-1.0.0.tgz",
+      "dependencies": {
+        "colors": {
+          "version": "0.6.2",
+          "from": "colors@~0.6.0-1",
+          "resolved": "http://npm.clockte.ch/colors/-/colors-0.6.2.tgz"
+        }
+      }
+    }
+  }
+}

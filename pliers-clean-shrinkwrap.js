@@ -1,9 +1,9 @@
 var fs = require('fs')
   , join = require('path').join
 
-module.exports = function (pliers) {
+module.exports = function (pliers, taskName) {
 
-  pliers('cleanShrinkwrap', function () {
+  pliers(taskName || 'cleanShrinkwrap', function (done) {
 
     if (!pliers.version) {
       pliers.logger.error('You need pliers >=0.3.4 to use this plugin')
@@ -14,7 +14,7 @@ module.exports = function (pliers) {
       , shrinkwrap = require(shrinkwrapPath)
 
     function replacer(key, val) {
-      if (key === 'resolved' && this.from && this.version) {
+      if (key === 'resolved' && this.from && this.version && (this.from.indexOf('.git') === -1)) {
         pliers.logger.debug('Removing', val)
         return undefined
       } else {
@@ -23,5 +23,7 @@ module.exports = function (pliers) {
     }
 
     fs.writeFileSync(shrinkwrapPath, JSON.stringify(shrinkwrap, replacer, 2))
+    pliers.logger.debug('Writing shrinkwrap to ', shrinkwrapPath)
+    done()
   })
 }
