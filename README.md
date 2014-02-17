@@ -6,7 +6,7 @@ Strips out 'resolved' from npmshrinkwraps
 
 ## Installation
 
-      npm install pliers-clean-shrinkwrap
+      npm install --save-dev pliers-clean-shrinkwrap
 
 ## Usage
 
