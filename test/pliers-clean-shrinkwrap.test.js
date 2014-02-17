@@ -12,22 +12,9 @@ describe('pliers-clean-shrinkwrap', function () {
     .on('finish', done)
   })
 
-  it('should create a task with default name', function () {
-    var pliers = createPliers()
-    cleanShrinkwrap(pliers)
-    pliers.tasks.should.have.property('cleanShrinkwrap')
-  })
-
-  it('should create a task with custom name', function () {
-    var pliers = createPliers()
-    cleanShrinkwrap(pliers, 'foobar')
-    pliers.tasks.should.have.property('foobar')
-  })
-
   it('should strip resolve paths', function (done) {
     var pliers = createPliers()
-    cleanShrinkwrap(pliers)
-    pliers.run('cleanShrinkwrap', function() {
+    cleanShrinkwrap(pliers)(function() {
       var shrinkWrap = JSON.parse(fs.readFileSync(shrinkWrapPath))
       shrinkWrap.dependencies.lodash.should.not.have.property('resolved')
       done()
@@ -36,8 +23,7 @@ describe('pliers-clean-shrinkwrap', function () {
 
   it('should not strip resolve paths for git based modules', function (done) {
     var pliers = createPliers()
-    cleanShrinkwrap(pliers)
-    pliers.run('cleanShrinkwrap', function() {
+    cleanShrinkwrap(pliers)(function() {
       var shrinkWrap = JSON.parse(fs.readFileSync(shrinkWrapPath))
       shrinkWrap.dependencies['git-package'].should.have.property('resolved')
       done()

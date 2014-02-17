@@ -1,9 +1,9 @@
 var fs = require('fs')
   , join = require('path').join
 
-module.exports = function (pliers, taskName) {
+module.exports = function (pliers) {
 
-  pliers(taskName || 'cleanShrinkwrap', function (done) {
+  return function (done) {
 
     if (!pliers.version) {
       pliers.logger.error('You need pliers >=0.3.4 to use this plugin')
@@ -25,5 +25,6 @@ module.exports = function (pliers, taskName) {
     fs.writeFileSync(shrinkwrapPath, JSON.stringify(shrinkwrap, replacer, 2))
     pliers.logger.debug('Writing shrinkwrap to ', shrinkwrapPath)
     done()
-  })
+  }
+
 }

@@ -16,13 +16,17 @@
   },
   "main": "./pliers-clean-shrinkwrap",
   "scripts": {
-    "lint": "./node_modules/.bin/jshint . --reporter=./node_modules/jshint-full-path/index.js"
+    "lint": "./node_modules/.bin/jshint .",
+    "pretest": "npm run lint",
+    "test": "./node_modules/.bin/mocha -r should test"
   },
   "engines": {
     "node": ">=0.10"
   },
   "dependencies": {},
   "devDependencies": {
-    "pliers": "~0.3.2"
+    "pliers": "~0.3.2",
+    "should": "~3.1.2",
+    "mocha": "~1.17.1"
   }
 }

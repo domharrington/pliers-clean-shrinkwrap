@@ -16,7 +16,7 @@ This will expose a new pliers task.
 // within a pliers.js
 module.exports = function (pliers) {
 
-  require('pliers-clean-shrinkwrap')(pliers)
+  pliers('cleanShrinkwrap', require('pliers-clean-shrinkwrap')(pliers))
 
 }
 ```
@@ -28,19 +28,6 @@ pliers cleanShrinkwrap
 ```
 
 Will clean the npmshrinkwrap.json in the current directory.
-
-### Custom Taskname
-
-If you need a custom taskname add as second argument.
-
-```js
-
-module.exports = function (pliers) {
-
-  require('pliers-clean-shrinkwrap')(pliers, 'myTaskName')
-
-}
-```
 
 ## Credits
 [Paul Serby](https://github.com/serby/) follow me on twitter [@serby](http://twitter.com/serby)
