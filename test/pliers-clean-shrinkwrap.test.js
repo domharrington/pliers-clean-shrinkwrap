@@ -26,6 +26,7 @@ describe('pliers-clean-shrinkwrap', function () {
     cleanShrinkwrap(pliers)(function() {
       var shrinkWrap = JSON.parse(fs.readFileSync(shrinkWrapPath))
       shrinkWrap.dependencies['git-package'].should.have.property('resolved')
+      shrinkWrap.dependencies['git-protocol-package'].should.have.property('resolved')
       done()
     })
   })

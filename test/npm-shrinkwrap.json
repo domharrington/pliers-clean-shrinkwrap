@@ -16,6 +16,12 @@
       "resolved": "git+ssh://git@github.com:githubuser/mypackage.git#sha1hash",
       "dependencies": {}
     },
+    "git-protocol-package": {
+      "version": "1",
+      "from": "esprima@git://github.com/substack/esprima#is-keyword",
+      "resolved": "git://github.com/substack/esprima#0a7f8489a11b44b019ce168506f535f22d0be290",
+      "dependencies": {}
+    },
     "glob": {
       "version": "3.1.21",
       "from": "glob@~3.1",
