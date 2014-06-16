@@ -14,7 +14,7 @@ module.exports = function (pliers) {
       , shrinkwrap = require(shrinkwrapPath)
 
     function replacer(key, val) {
-      if (key === 'resolved' && this.from && this.version && (this.from.indexOf('.git') === -1)) {
+      if (key === 'resolved' && this.from && this.version && (!this.from.match(/.git|git:\/\//))) {
         pliers.logger.debug('Removing', val)
         return undefined
       } else {
