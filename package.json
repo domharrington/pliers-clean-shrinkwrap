@@ -2,7 +2,7 @@
   "author": "Paul Serby <paul@serby.net>",
   "name": "pliers-clean-shrinkwrap",
   "description": "Cleans shrinkwrap of repository URL",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "tags": [
     "pliers",
     "qa"
