@@ -1,4 +1,4 @@
-# pliers-clean-shrinkwrap
+# [pliers](https://pliersjs.github.io/)-clean-shrinkwrap
 
 [![build status](https://secure.travis-ci.org/serby/pliers-clean-shrinkwrap.png)](http://travis-ci.org/serby/pliers-clean-shrinkwrap)
 
