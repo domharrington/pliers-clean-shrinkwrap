@@ -1,6 +1,6 @@
 # [pliers](https://pliersjs.github.io/)-clean-shrinkwrap
 
-[![build status](https://secure.travis-ci.org/serby/pliers-clean-shrinkwrap.png)](http://travis-ci.org/serby/pliers-clean-shrinkwrap)
+[![build status](https://secure.travis-ci.org/pliersjs/pliers-clean-shrinkwrap.png)](http://travis-ci.org/pliersjs/pliers-clean-shrinkwrap)
 
 Strips out 'resolved' from npmshrinkwraps
 
