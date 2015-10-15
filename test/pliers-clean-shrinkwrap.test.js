@@ -1,6 +1,7 @@
 var createPliers = require('pliers').bind(null, { cwd: __dirname, logLevel: 'error' })
   , cleanShrinkwrap = require('..')
   , fs = require('fs')
+  , assert = require('assert')
   , shrinkWrapPath = __dirname + '/npm-shrinkwrap.json'
 
 describe('pliers-clean-shrinkwrap', function () {
@@ -30,5 +31,12 @@ describe('pliers-clean-shrinkwrap', function () {
       shrinkWrap.dependencies['github-shorthand-url'].should.have.property('resolved')
       done()
     })
+  })
+
+  it('should not throw if the package name is `from`', function () {
+    var pliers = createPliers()
+    assert.doesNotThrow(function () {
+      cleanShrinkwrap(pliers)(function() {})
+    }, /Object #<Object> has no method 'match'/)
   })
 })

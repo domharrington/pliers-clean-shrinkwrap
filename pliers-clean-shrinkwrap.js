@@ -14,7 +14,7 @@ module.exports = function (pliers) {
       , shrinkwrap = require(shrinkwrapPath)
 
     function replacer(key, val) {
-      var fromGitUrl = this.from && this.from.match(/.git|git:\/\//)
+      var fromGitUrl = this.from && typeof this.from === 'string' && this.from.match(/.git|git:\/\//)
         , resolvedGitUrl = this.resolved && this.resolved.match(/.git|git:\/\//)
 
       if (key === 'resolved' && this.version && !fromGitUrl && !resolvedGitUrl) {
