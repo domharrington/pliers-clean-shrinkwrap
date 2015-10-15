@@ -8,7 +8,7 @@ describe('pliers-clean-shrinkwrap', function () {
   beforeEach(function (done) {
     fs.unlinkSync(shrinkWrapPath)
     fs.createReadStream(__dirname + '/fixture.npm-shrinkwrap.json')
-    .pipe(fs.createWriteStream(__dirname + '/npm-shrinkwrap.json'))
+    .pipe(fs.createWriteStream(shrinkWrapPath))
     .on('finish', done)
   })
 
@@ -27,6 +27,7 @@ describe('pliers-clean-shrinkwrap', function () {
       var shrinkWrap = JSON.parse(fs.readFileSync(shrinkWrapPath))
       shrinkWrap.dependencies['git-package'].should.have.property('resolved')
       shrinkWrap.dependencies['git-protocol-package'].should.have.property('resolved')
+      shrinkWrap.dependencies['github-shorthand-url'].should.have.property('resolved')
       done()
     })
   })

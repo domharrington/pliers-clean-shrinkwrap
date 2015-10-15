@@ -98,6 +98,12 @@
           "resolved": "http://npm.clockte.ch/colors/-/colors-0.6.2.tgz"
         }
       }
+    },
+    "github-shorthand-url": {
+      "version": "1",
+      "from": "substack/esprima#is-keyword",
+      "resolved": "git://github.com/substack/esprima#0a7f8489a11b44b019ce168506f535f22d0be290",
+      "dependencies": {}
     }
   }
 }
